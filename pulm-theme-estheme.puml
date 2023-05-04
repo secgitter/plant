@@ -1,0 +1,97 @@
+'' Elegant Silver Theme
+'' Mostly grays with a touch of blue
+'' Author: [Your Name Here]
+'' Copyright (c) [Year] by [Your Name Here]
+
+!define BACKGROUND_COLOR #F5F5F5
+!define DARK_GRAY #333333
+!define LIGHT_GRAY #CCCCCC
+!define MEDIUM_GRAY #777777
+!define BLUE #336699
+!define LIGHT_BLUE #B0C4DE
+
+!define FONT_FAMILY Verdana
+!define FONT_SIZE 12
+
+!define BORDER_THICKNESS 1
+!define BORDER_ROUNDNESS 8
+
+!define BOX_PADDING 6
+!define BOX_MARGIN 10
+
+!define LINE_THICKNESS 1
+
+!define SHADOW_OPACITY 0.0
+
+!define PRIMARY_COLOR $MEDIUM_GRAY
+!define PRIMARY_LIGHT_COLOR $LIGHT_GRAY
+!define PRIMARY_DARK_COLOR $DARK_GRAY
+!define PRIMARY_TEXT_COLOR $BLUE
+
+!define SECONDARY_COLOR $LIGHT_GRAY
+!define SECONDARY_LIGHT_COLOR $LIGHT_BLUE
+!define SECONDARY_DARK_COLOR $MEDIUM_GRAY
+!define SECONDARY_TEXT_COLOR #FFFFFF
+
+!define INFO_COLOR $BLUE
+!define INFO_LIGHT_COLOR #5c85ad
+!define INFO_DARK_COLOR #29527a
+!define INFO_TEXT_COLOR #FFFFFF
+
+!define SUCCESS_COLOR #339933
+!define SUCCESS_LIGHT_COLOR #5cad5c
+!define SUCCESS_DARK_COLOR #297a29
+!define SUCCESS_TEXT_COLOR #FFFFFF
+
+!define WARNING_COLOR #ffae42
+!define WARNING_LIGHT_COLOR #ffbe68
+!define WARNING_DARK_COLOR #cc8b35
+!define WARNING_TEXT_COLOR #FFFFFF
+
+!define DANGER_COLOR #ff3333
+!define DANGER_LIGHT_COLOR #ff5c5c
+!define DANGER_DARK_COLOR #cc2929
+!define DANGER_TEXT_COLOR #FFFFFF
+
+!define BACKGROUND_COLOR_VAR !$VARIABLE_EXISTS(BACKGROUND_COLOR) ? "transparent" : BACKGROUND_COLOR
+
+skinparam backgroundColor $BACKGROUND_COLOR_VAR
+skinparam useBetaStyle false
+
+!procedure $success($msg)
+  <font color=$SUCCESS_COLOR><b>$msg
+!endprocedure
+
+!procedure $failure($msg)
+  <font color=$DANGER_COLOR><b>$msg
+!endprocedure
+
+!procedure $warning($msg)
+  <font color=$WARNING_COLOR><b>$msg
+!endprocedure
+
+!procedure $primary_scheme()
+  FontColor $PRIMARY_TEXT_COLOR
+  BorderColor $PRIMARY_LIGHT_COLOR
+  BackgroundColor $PRIMARY_COLOR-$PRIMARY_DARK_COLOR
+!endprocedure
+
+!define TINT_FACTOR 0.8
+!define SHADE_FACTOR 0.8
+
+!define PRIMARY_LIGHT_TINT PRIMARY_COLOR + (255 - PRIMARY_COLOR) * TINT_FACTOR
+!define PRIMARY_DARK_SHADE PRIMARY_COLOR * (1 - SHADE_FACTOR)
+
+!define SECONDARY_LIGHT_TINT SECONDARY_COLOR + (255 - SECONDARY_COLOR) * TINT_FACTOR
+!define SECONDARY_DARK_SHADE SECONDARY_COLOR * (1 - SHADE_FACTOR)
+
+!define INFO_LIGHT_TINT INFO_COLOR + (255 - INFO_COLOR) * TINT_FACTOR
+!define INFO_DARK_SHADE INFO_COLOR * (1 - SHADE_FACTOR)
+
+!define SUCCESS_LIGHT_TINT SUCCESS_COLOR + (255 - SUCCESS_COLOR) * TINT_FACTOR
+!define SUCCESS_DARK_SHADE SUCCESS_COLOR * (1 - SHADE_FACTOR)
+
+!define WARNING_LIGHT_TINT WARNING_COLOR + (255 - WARNING_COLOR) * TINT_FACTOR
+!define WARNING_DARK_SHADE WARNING_COLOR * (1 - SHADE_FACTOR)
+
+!define DANGER_LIGHT_TINT DANGER
