@@ -6,7 +6,7 @@
 '' Copyright (c) 2019 by Brett Schwarz
 '' Modified Theme for ARPA-H 
 
-!$THEME = "ARPA-H-outline"
+!$THEME = "puml-theme-arpa"
 
 !if %not(%variable_exists("$BGCOLOR"))
 !$BGCOLOR = "transparent"
@@ -16,61 +16,61 @@ skinparam backgroundColor $BGCOLOR
 skinparam useBetaStyle false
 
 '' Updated Colors based on provided brand colors
-!$PRIMARY = "#2FB1E6"      ' Blue
-!$PRIMARY_LIGHT = "#9BD7EE"  ' Blue-light
-!$PRIMARY_DARK = "#001B5E"   ' Navy
-!$PRIMARY_TEXT = "#FFFFFF"    ' White
+!$PRIMARY = "#2FB1E6"
+!$PRIMARY_LIGHT = "#9BD7EE"
+!$PRIMARY_DARK = "#001B5E"
+!$PRIMARY_TEXT = "#FFFFFF"
 
-!$SECONDARY = "#E5EAF0"    ' Cool-gray-10
-!$SECONDARY_LIGHT = "#FCC1DC" ' Pink-light
-!$SECONDARY_DARK = "#BAC2CC"  ' Cool-gray-40
-!$SECONDARY_TEXT = "#131314"  ' Neutral
+!$SECONDARY = "#E5EAF0"
+!$SECONDARY_LIGHT = "#FCC1DC"
+!$SECONDARY_DARK = "#BAC2CC"
+!$SECONDARY_TEXT = "#131314"
 
-!$SUCCESS = "#ADECE5"      ' Turquoise-light
-!$SUCCESS_LIGHT = "#29E1CB" ' Turquoise
-!$SUCCESS_TEXT = "#131314"  ' Neutral
+!$SUCCESS = "#ADECE5"
+!$SUCCESS_LIGHT = "#29E1CB"
+!$SUCCESS_TEXT = "#131314"
 
-!$INFO = "#000334"         ' Indigo
-!$INFO_LIGHT = "#B8B2E4"    ' Violet-light
-!$INFO_TEXT = "#FFFFFF"    ' White
+!$INFO = "#000334"        
+!$INFO_LIGHT = "#B8B2E4"    
+!$INFO_TEXT = "#FFFFFF"    
 
-!$WARNING = "#0957BE"      ' Blue-dark
-!$WARNING_LIGHT = "#9BD7EE" ' Blue-light
-!$WARNING_TEXT = "#FFFFFF"    ' White
+!$WARNING = "#0957BE"      
+!$WARNING_LIGHT = "#9BD7EE" 
+!$WARNING_TEXT = "#FFFFFF"    
 
-!$DANGER = "#FD4497"       ' Pink
-!$DANGER_LIGHT = "#FCC1DC"  ' Pink-light
-!$DANGER_TEXT = "#FFFFFF"    ' White
+!$DANGER = "#FD4497"      
+!$DANGER_LIGHT = "#FCC1DC"  
+!$DANGER_TEXT = "#FFFFFF"   
 
-!$LIGHT = "#F3F5F8"        ' Cool-gray-5
-!$DARK = "#131314"         ' Neutral
-!$FGCOLOR = "#6F747A"      ' Cool-gray-60
+!$LIGHT = "#F3F5F8"        
+!$DARK = "#131314"       
+!$FGCOLOR = "#6F747A"     
 
 '' Assigning other brand colors for potential use
-!$INDIGO = "#000334"       ' Indigo
-!$NAVY = "#001B5E"         ' Navy
-!$CYAN = "#52DAF2"         ' Cyan
-!$WHITE = "#FFFFFF"        ' White
+!$INDIGO = "#000334"      
+!$NAVY = "#001B5E"        
+!$CYAN = "#52DAF2"        
+!$WHITE = "#FFFFFF"        
 
-!$PINK_LIGHT = "#FCC1DC"   ' Pink-light
-!$VIOLET_LIGHT = "#B8B2E4" ' Violet-light
-!$TURQUOISE_LIGHT = "#ADECE5" ' Turquoise-light
-!$PINK = "#FD4497"         ' Pink
-!$VIOLET = "#5842D2"       ' Violet
-!$TURQUOISE = "#29E1CB"    ' Turquoise
-!$PINK_DARK = "#942859"    ' Pink-dark
-!$VIOLET_DARK = "#33287C"  ' Violet-dark
+!$PINK_LIGHT = "#FCC1DC"   
+!$VIOLET_LIGHT = "#B8B2E4" 
+!$TURQUOISE_LIGHT = "#ADECE5" 
+!$PINK = "#FD4497"        
+!$VIOLET = "#5842D2"       
+!$TURQUOISE = "#29E1CB"   
+!$PINK_DARK = "#942859"   
+!$VIOLET_DARK = "#33287C" 
 
-!$BLUE_LIGHT = "#9BD7EE"   ' Blue-light
-!$BLUE = "#2FB1E6"         ' Blue
-!$BLUE_DARK = "#0957BE"    ' Blue-dark
-!$TURQUOISE_DARK = "#188478" ' Turquoise-dark
+!$BLUE_LIGHT = "#9BD7EE"   
+!$BLUE = "#2FB1E6"        
+!$BLUE_DARK = "#0957BE"    
+!$TURQUOISE_DARK = "#188478" 
 
-!$GRAY_DARK = "#252729"    ' Cool-gray-80
-!$BLACK = "#000000"        ' Black
-!$GRAY = "#6F747A"         ' Cool-gray-60
-!$GRAY_LIGHT = "#BAC2CC"   ' Cool-gray-40
-!$COOL_GRAY = "#CCD5E1"    ' Cool-gray-30
+!$GRAY_DARK = "#252729"   
+!$BLACK = "#000000"        
+!$GRAY = "#6F747A"         
+!$GRAY_LIGHT = "#BAC2CC"  
+!$COOL_GRAY = "#CCD5E1"    
 
 !procedure $success($msg)
   <font color=$SUCCESS><b>$msg
@@ -443,7 +443,7 @@ skinparam database {
 skinparam class {
 	$primary_scheme()
 	FontColor $LIGHT
-	HeaderBackgroundColor $PRIMARY-$PRIMARY_DARK
+	HeaderBackgroundColor $PRIMARY-$PRIMARY
 	StereotypeFontColor $DARK
 	BorderThickness 1
 	AttributeFontColor $DARK
